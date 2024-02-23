@@ -12,7 +12,22 @@
 
 
 
-    //1ª Digitação (aqui) 
+    class Pessoa {
+      // Propriedades
+      nome = 'sem nome';
+      genero = 'não informado';
+      idade;
+      // Métodos
+      mostraGenero() {
+        exibirNaTela(this.genero);
+      }
+      mostraNome() {
+        exibirNaTela(this.nome);
+      }
+      verificaIdade() {
+        return this.idade  >= 18 ? 'maior de idade' : 'menor de idade';
+      }
+    } 
 
 
 
@@ -36,20 +51,32 @@
     // Criando objetos/ instâncias
 
 
+    let umaPessoa = new Pessoa;
+    umaPessoa.nome = 'Checo Perez';
+    umaPessoa.genero = 'masculino';
+    umaPessoa.idade = 30;
 
-    //2ª Digitação (aqui) 
+    exibirNaTela(umaPessoa);
 
+    let outraPessoa = new Pessoa;
+    outraPessoa.nome = 'Maria';
+    outraPessoa.idade = 25;
 
+    exibirNaTela(outraPessoa);
 
 
     // Objeto herdando recursos
 
+    let aluno = new Aluno;
+     aluno.nome = 'Vitória';
+     aluno.genero = 'feminino';
+     aluno.matricula = '123abc';
+     aluno.curso = 'JS para React';
+     aluno.idade = '25';
 
-
-
-     //3ª Digitação (aqui) 
-
-
+     exibirNaTela(aluno.nome);
+     exibirNaTela(aluno.idade);
+     exibirNaTela(aluno.verificaIdade());
 
 
     // Console.log(aluno)
