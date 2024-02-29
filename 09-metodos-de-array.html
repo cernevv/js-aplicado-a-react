@@ -159,16 +159,16 @@
 
     exibirNaTela(soma);
 
+
     // ____________________________________________
     exibirNaTela('==========FILTER e REDUCE============');
 
     // Soma os valores da categoria (Mobile')
-
-
-    
-
-
-    //8ª Digitação (aqui) 
+  const somaCursosMobile = cursos
+  .filter(curso => curso.categoria == 'Mobile')
+  .reduce((i, curso) => {
+    return i+ curso.preco
+  }, 0 )
 
 
 
